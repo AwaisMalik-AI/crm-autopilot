@@ -6,7 +6,7 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.api.routes import analytics, auth, contacts, email_accounts, leads, sequences, smart_lists, webhooks
+from app.api.routes import analytics, auth, contacts, crews, email_accounts, leads, sequences, smart_lists, webhooks
 from app.core.config import get_settings
 from app.core.database import init_db
 
@@ -39,6 +39,7 @@ app.include_router(email_accounts.router, prefix=prefix)
 app.include_router(smart_lists.router, prefix=prefix)
 app.include_router(analytics.router, prefix=prefix)
 app.include_router(webhooks.router, prefix=prefix)
+app.include_router(crews.router, prefix=prefix)
 
 
 @app.get("/health")

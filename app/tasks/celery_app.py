@@ -11,7 +11,7 @@ celery_app = Celery(
     "crm_autopilot",
     broker=str(settings.CELERY_BROKER_URL),
     backend=str(settings.CELERY_RESULT_BACKEND),
-    include=["app.tasks.email_tasks", "app.tasks.list_tasks"],
+    include=["app.tasks.email_tasks", "app.tasks.list_tasks", "app.tasks.crew_tasks"],
 )
 
 celery_app.conf.update(
