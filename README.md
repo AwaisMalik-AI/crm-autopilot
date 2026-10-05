@@ -2,7 +2,7 @@
 
 **AI-powered CRM and outreach automation** for freelancers and agencies — contact and lead management, AI-assisted lead scoring, email sequences with mailbox warmup, campaign analytics, pipeline stages, smart lists, scheduled daily reports, and signed webhooks.
 
-**Latest:** Outreach crew (`POST /api/crews/outreach`) — researcher → copywriter → compliance, plus Celery worker `crm.run_outreach_crew`.
+**Latest:** Outreach crew plus **next-best-action insights** (`POST /api/insights/next-best-action`).
 
 Backend-only **FastAPI** service designed as a **portfolio-grade** reference: structured layers (routes → services → models), **no hardcoded secrets**, Docker Compose with **Celery worker + beat**, and clear extension points (LLM, tracking providers).
 
